@@ -25,26 +25,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         SqlConnection conn;
-        private void button3_Click(object sender, EventArgs e)
-        {
-          this.Hide();
-            Login2 k =new Login2();
-            k.Show(); 
-        }
+      
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
-            textBox3.Text = string.Empty;
-            textBox4.Text = string.Empty;
-            textBox5.Text = string.Empty;
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -59,39 +41,8 @@ namespace WindowsFormsApp1
             //MessageBox.Show("sucessfully connection Cadde!");
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                connect();
-                string gelinta_xog = "insert into User_registartion values ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
-                SqlCommand cmd = new SqlCommand(gelinta_xog, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("successfully your Account ");
-                textBox1.Text = string.Empty;
-                textBox2.Text = string.Empty;
-                textBox3.Text = string.Empty;
-                textBox4.Text = string.Empty;
-                textBox5.Text = string.Empty;
-            }
-            catch(Exception ex){
-                MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            connect();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
+       
+       
 
         }
     }
